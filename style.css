@@ -1,3 +1,5 @@
+/* ==================== RESET & BASE ==================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +9,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #F3F1EC;
-    color: #222222;
+    background-color: #F8F6F1;
+    color: #252525;
     line-height: 1.7;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -18,161 +20,10 @@ a {
 }
 
 
-/* ==================== DARK MODE ==================== */
-
-body.dark-mode {
-    background-color: #121212;
-    color: #f1f1f1;
-}
-
-body.dark-mode .navbar {
-    background-color: #1b1b1b;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-}
-
-body.dark-mode .profile-name p {
-    color: #bbbbbb;
-}
-
-body.dark-mode .nav-links a {
-    color: #eeeeee;
-}
-
-body.dark-mode .about-section {
-    background-color: #181818;
-}
-
-body.dark-mode .about-text h1 {
-    color: #f1f1f1;
-}
-
-body.dark-mode .about-text p {
-    color: #c7c7c7;
-}
-
-body.dark-mode .skill-card {
-    background-color: #1e1e1e;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-mode .skill-card h3 {
-    color: #f1f1f1;
-}
-
-body.dark-mode .skill-card p {
-    color: #c7c7c7;
-}
-
-body.dark-mode .projects-section {
-    background-color: #181818;
-}
-
-body.dark-mode .project-card {
-    background-color: #202020;
-    box-shadow: none;
-}
-
-body.dark-mode .project-card p {
-    color: #c7c7c7;
-}
-
-body.dark-mode #experience {
-    background-color: #121212;
-}
-
-body.dark-mode .experience-card {
-    background-color: #1e1e1e;
-}
-
-body.dark-mode .experience-card h4 {
-    color: #eeeeee;
-}
-
-body.dark-mode .experience-card p {
-    color: #c7c7c7;
-}
-
-body.dark-mode .education-section {
-    background-color: #181818;
-}
-
-body.dark-mode .education-card {
-    background-color: #202020;
-    box-shadow: none;
-}
-
-body.dark-mode .education-institution {
-    color: #f1f1f1 !important;
-}
-
-body.dark-mode .education-board {
-    color: #c7c7c7 !important;
-}
-
-body.dark-mode .certifications-section {
-    background-color: #121212;
-}
-
-body.dark-mode .certificate-card {
-    background-color: #1e1e1e;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-mode .certificate-image {
-    background-color: #292929;
-}
-
-body.dark-mode .certificate-organization {
-    color: #eeeeee;
-}
-
-body.dark-mode .certificate-description {
-    color: #c7c7c7;
-}
-
-body.dark-mode .recommendation-card {
-    background-color: #1e1e1e;
-    border-color: #333333;
-}
-
-body.dark-mode .recommendation-card p {
-    color: #c7c7c7;
-}
-
-body.dark-mode .recommendation-form {
-    background-color: #1e1e1e;
-}
-
-body.dark-mode .recommendation-form input,
-body.dark-mode .recommendation-form textarea {
-    background-color: #292929;
-    color: #f1f1f1;
-    border-color: #444444;
-}
-
-body.dark-mode .recommendation-form input::placeholder,
-body.dark-mode .recommendation-form textarea::placeholder {
-    color: #aaaaaa;
-}
-
-body.dark-mode .contact-section {
-    background-color: #181818;
-}
-
-body.dark-mode .contact-container p {
-    color: #c7c7c7;
-}
-
-body.dark-mode .popup-content {
-    background-color: #1e1e1e;
-    color: #f1f1f1;
-}
-
-
 /* ==================== NAVIGATION ==================== */
 
 .navbar {
-    background-color: #FAF9F6;
+    background-color: #FCFAF6;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -184,7 +35,7 @@ body.dark-mode .popup-content {
 }
 
 .profile-name h2 {
-    color: #78977A;
+    color: #7895AD;
     font-size: 28px;
 }
 
@@ -211,14 +62,14 @@ body.dark-mode .popup-content {
 .nav-links a:hover {
     font-weight: bold;
     text-decoration: underline;
-    color: #78977A;
+    color: #5B758D;
 }
 
 
 /* ==================== THEME BUTTON ==================== */
 
 .theme-toggle {
-    background-color: #78977A;
+    background-color: #7895AD;
     color: #ffffff;
     border: none;
     border-radius: 50%;
@@ -235,7 +86,7 @@ body.dark-mode .popup-content {
 }
 
 .theme-toggle:hover {
-    background-color: #5F7D61;
+    background-color: #5B758D;
     transform: rotate(15deg);
 }
 
@@ -249,8 +100,14 @@ body.dark-mode .popup-content {
     align-items: center;
     gap: 70px;
     padding: 80px 10%;
-    background-color: #F3F1EC;
+    background-color: #F8F6F1;
     transition: background-color 0.3s ease;
+}
+
+.profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-image img {
@@ -258,6 +115,55 @@ body.dark-mode .popup-content {
     height: 270px;
     object-fit: contain;
 }
+
+
+/* ==================== PROFILE MONOGRAM ==================== */
+
+.monogram {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+
+    background: #E8EEF3;
+    border: 2px solid #7895AD;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    box-shadow: 0 12px 30px rgba(91, 117, 141, 0.15);
+}
+
+.monogram::before {
+    content: "";
+    position: absolute;
+
+    width: 215px;
+    height: 215px;
+
+    border-radius: 50%;
+
+    border: 1px solid #B7C7D4;
+}
+
+.monogram span {
+    font-family: Georgia, serif;
+    font-size: 72px;
+    font-weight: bold;
+
+    color: #526F86;
+
+    letter-spacing: 5px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ==================== ABOUT TEXT ==================== */
 
 .about-text {
     max-width: 700px;
@@ -270,7 +176,7 @@ body.dark-mode .popup-content {
 }
 
 .about-text h1 span {
-    color: #78977A;
+    color: #7895AD;
     font-weight: bold;
 }
 
@@ -291,7 +197,23 @@ body.dark-mode .popup-content {
     text-align: center;
     font-size: 40px;
     margin-bottom: 50px;
-    color: #78977A;
+    color: #7895AD;
+}
+
+
+/* ==================== SECTION BACKGROUNDS ==================== */
+
+.projects-section,
+.education-section,
+.contact-section {
+    background-color: #EEEAE3;
+    transition: background-color 0.3s ease;
+}
+
+#experience,
+.certifications-section {
+    background-color: #F8F6F1;
+    transition: background-color 0.3s ease;
 }
 
 
@@ -306,14 +228,22 @@ body.dark-mode .popup-content {
 }
 
 .skill-card {
-    background-color: #ffffff;
+    background-color: #FFFDF9;
+
     width: 210px;
     min-height: 275px;
+
     text-align: center;
+
     padding: 30px 20px;
+
     border-radius: 12px;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
 }
 
 .skill-card:hover {
@@ -341,17 +271,17 @@ body.dark-mode .popup-content {
 
 /* ==================== PROJECTS ==================== */
 
-.projects-section {
-    background-color: #E9E6DE;
-    transition: background-color 0.3s ease;
-}
-
 .project-card {
     max-width: 900px;
-    margin: 0 auto 25px auto;
-    background-color: #f7f8fc;
+
+    margin: 0 auto 25px;
+
+    background-color: #FAF8F3;
+
     padding: 30px;
-    border-left: 5px solid #78977A;
+
+    border-left: 5px solid #7895AD;
+
     border-radius: 8px;
 
     transition:
@@ -362,41 +292,46 @@ body.dark-mode .popup-content {
 
 .project-card:hover {
     transform: translateY(-4px);
+
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .project-card h3 {
     margin-bottom: 12px;
-    color: #78977A;
+
+    color: #7895AD;
+
     font-size: 23px;
 }
 
 .project-card p {
     color: #555555;
+
     font-size: 19px;
 }
 
 .project-tech {
     margin-top: 14px;
+
     font-size: 17px !important;
 }
 
 
 /* ==================== EXPERIENCE ==================== */
 
-#experience {
-    
-    background-color: #F3F1EC;
-}
-
-
 .experience-card {
     max-width: 850px;
-    margin: 0 auto 25px auto;
-    background-color: #ffffff;
+
+    margin: 0 auto 25px;
+
+    background-color: #FFFDF9;
+
     padding: 30px;
+
     border-radius: 12px;
-    border-left: 5px solid #78977A;
+
+    border-left: 5px solid #7895AD;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 
     transition:
@@ -407,53 +342,64 @@ body.dark-mode .popup-content {
 
 .experience-card:hover {
     transform: translateY(-4px);
+
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.09);
 }
 
 .experience-card h3 {
-    color: #78977A;
+    color: #7895AD;
+
     font-size: 24px;
+
     margin-bottom: 5px;
 }
 
 .experience-card h4 {
     color: #222222;
+
     font-size: 19px;
+
     margin-bottom: 5px;
 }
 
 .experience-date {
-    color: #78977A;
+    color: #7895AD;
+
     font-size: 17px;
+
     font-weight: bold;
+
     margin-bottom: 10px;
 }
 
 .experience-card p {
     color: #555555;
+
     font-size: 18px;
 }
 
 
 /* ==================== EDUCATION ==================== */
 
-.education-section {
-    
-    background-color: #E9E6DE;
-    transition: background-color 0.3s ease;
-}
-
 .education-card {
     max-width: 850px;
-    margin: 0 auto 25px auto;
-    background-color: #f7f8fc;
+
+    margin: 0 auto 25px;
+
+    background-color: #FAF8F3;
+
     padding: 30px;
+
     border-radius: 12px;
-    border-left: 5px solid #78977A;
+
+    border-left: 5px solid #7895AD;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 
     display: flex;
+
     align-items: center;
+
     gap: 30px;
 
     transition:
@@ -464,6 +410,7 @@ body.dark-mode .popup-content {
 
 .education-card:hover {
     transform: translateY(-4px);
+
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.09);
 }
 
@@ -473,10 +420,13 @@ body.dark-mode .popup-content {
     height: 130px;
 
     background-color: #ffffff;
+
     border-radius: 10px;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     padding: 15px;
@@ -485,6 +435,7 @@ body.dark-mode .popup-content {
 .education-logo img {
     width: 100%;
     height: 100%;
+
     object-fit: contain;
 }
 
@@ -493,47 +444,57 @@ body.dark-mode .popup-content {
 }
 
 .education-info h3 {
-    color: #78977A;
+    color: #7895AD;
+
     margin-bottom: 8px;
+
     font-size: 24px;
 }
 
 .education-institution {
     color: #222222 !important;
+
     font-size: 19px !important;
+
     font-weight: bold;
+
     margin-bottom: 4px;
 }
 
 .education-board {
     color: #555555 !important;
+
     font-size: 18px !important;
+
     margin-bottom: 4px;
 }
 
 .education-date {
-    color: #78977A !important;
+    color: #7895AD !important;
+
     font-size: 17px !important;
+
     font-weight: bold;
 }
 
 
 /* ==================== CERTIFICATIONS ==================== */
 
-.certifications-section {
-    background-color: #F3F1EC;
-    transition: background-color 0.3s ease;
-}
-
 .certificate-card {
     max-width: 1000px;
-    margin: 0 auto 30px auto;
-    background-color: #ffffff;
+
+    margin: 0 auto 30px;
+
+    background-color: #FFFDF9;
+
     padding: 25px;
+
     border-radius: 14px;
 
     display: flex;
+
     align-items: center;
+
     gap: 35px;
 
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
@@ -546,27 +507,37 @@ body.dark-mode .popup-content {
 
 .certificate-card:hover {
     transform: translateY(-5px);
+
     box-shadow: 0 7px 20px rgba(0, 0, 0, 0.11);
 }
 
 .certificate-image {
     width: 390px;
+
     min-width: 390px;
 
-    background-color: #f7f8fc;
+    background-color: #FAF8F3;
+
     border-radius: 10px;
+
     padding: 10px;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 }
 
 .certificate-image img {
     width: 100%;
+
     height: auto;
+
     max-height: 270px;
+
     object-fit: contain;
+
     border-radius: 6px;
 }
 
@@ -575,29 +546,38 @@ body.dark-mode .popup-content {
 }
 
 .certificate-info h3 {
-    color: #78977A;
+    color: #7895AD;
+
     font-size: 25px;
+
     margin-bottom: 8px;
 }
 
 .certificate-organization {
     font-size: 19px;
+
     font-weight: bold;
+
     color: #333333;
+
     margin-bottom: 12px;
 }
 
 .certificate-description {
     font-size: 18px;
+
     color: #555555;
+
     margin-bottom: 18px;
+
     line-height: 1.6;
 }
 
 .certificate-link {
     display: inline-block;
 
-    background-color: #78977A;
+    background-color: #7895AD;
+
     color: #ffffff;
 
     text-decoration: none;
@@ -612,7 +592,8 @@ body.dark-mode .popup-content {
 }
 
 .certificate-link:hover {
-    background-color: #5F7D61;
+    background-color: #5B758D;
+
     transform: translateY(-2px);
 }
 
@@ -621,24 +602,30 @@ body.dark-mode .popup-content {
 
 .recommendation-container {
     display: flex;
+
     justify-content: center;
+
     align-items: stretch;
+
     flex-wrap: wrap;
+
     gap: 25px;
+
     margin-bottom: 50px;
 }
 
 .recommendation-card {
     width: 300px;
+
     min-height: 190px;
 
-    background-color: #ffffff;
+    background-color: #FFFDF9;
 
     padding: 25px;
 
     border-radius: 12px;
 
-    border: 1px solid #dddddd;
+    border: 1px solid #DDDDDD;
 
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
 
@@ -653,8 +640,11 @@ body.dark-mode .popup-content {
 
 .recommendation-card p {
     font-style: italic;
+
     color: #555555;
+
     font-size: 18px;
+
     line-height: 1.7;
 }
 
@@ -663,9 +653,10 @@ body.dark-mode .popup-content {
 
 .recommendation-form {
     max-width: 600px;
+
     margin: auto;
 
-    background-color: #ffffff;
+    background-color: #FFFDF9;
 
     padding: 35px;
 
@@ -678,8 +669,11 @@ body.dark-mode .popup-content {
 
 .recommendation-form h3 {
     text-align: center;
+
     margin-bottom: 25px;
-    color: #78977A;
+
+    color: #7895AD;
+
     font-size: 24px;
 }
 
@@ -691,7 +685,7 @@ body.dark-mode .popup-content {
 
     margin-bottom: 15px;
 
-    border: 1px solid #cccccc;
+    border: 1px solid #CCCCCC;
 
     border-radius: 6px;
 
@@ -711,7 +705,7 @@ body.dark-mode .popup-content {
 
     padding: 12px 25px;
 
-    background-color: #78977A;
+    background-color: #7895AD;
 
     color: #ffffff;
 
@@ -727,34 +721,37 @@ body.dark-mode .popup-content {
 }
 
 .recommendation-form button:hover {
-    background-color: #5F7D61;
+    background-color: #5B758D;
+
     transform: translateY(-2px);
 }
 
 
 /* ==================== CONTACT ==================== */
 
-.contact-section {
-    background-color: #E9E6DE;
-    transition: background-color 0.3s ease;
-}
-
 .contact-container {
     max-width: 700px;
+
     margin: auto;
+
     text-align: center;
 }
 
 .contact-container p {
     color: #555555;
+
     margin-bottom: 25px;
+
     font-size: 19px;
 }
 
 .contact-links {
     display: flex;
+
     justify-content: center;
+
     gap: 20px;
+
     flex-wrap: wrap;
 }
 
@@ -763,7 +760,7 @@ body.dark-mode .popup-content {
 
     padding: 12px 25px;
 
-    background-color: #78977A;
+    background-color: #7895AD;
 
     color: #ffffff;
 
@@ -777,7 +774,8 @@ body.dark-mode .popup-content {
 }
 
 .contact-links a:hover {
-    background-color: #5F7D61;
+    background-color: #5B758D;
+
     transform: translateY(-2px);
 }
 
@@ -792,19 +790,22 @@ body.dark-mode .popup-content {
     z-index: 2000;
 
     left: 0;
+
     top: 0;
 
     width: 100%;
+
     height: 100%;
 
     background-color: rgba(0, 0, 0, 0.5);
 
     justify-content: center;
+
     align-items: center;
 }
 
 .popup-content {
-    background-color: #ffffff;
+    background-color: #FFFDF9;
 
     padding: 35px;
 
@@ -818,7 +819,7 @@ body.dark-mode .popup-content {
 }
 
 .popup-content h3 {
-    color: #78977A;
+    color: #7895AD;
 
     margin-bottom: 15px;
 
@@ -832,7 +833,7 @@ body.dark-mode .popup-content {
 }
 
 .popup-content button {
-    background-color: #78977A;
+    background-color: #7895AD;
 
     color: #ffffff;
 
@@ -848,7 +849,7 @@ body.dark-mode .popup-content {
 }
 
 .popup-content button:hover {
-    background-color: #5F7D61;
+    background-color: #5B758D;
 }
 
 
@@ -858,12 +859,14 @@ body.dark-mode .popup-content {
     position: fixed;
 
     right: 30px;
+
     bottom: 30px;
 
     width: 50px;
+
     height: 50px;
 
-    background-color: #78977A;
+    background-color: #7895AD;
 
     color: #ffffff;
 
@@ -874,6 +877,7 @@ body.dark-mode .popup-content {
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
     font-size: 30px;
@@ -886,7 +890,7 @@ body.dark-mode .popup-content {
 }
 
 .home-icon:hover {
-    background-color: #5F7D61;
+    background-color: #5B758D;
 
     transform: translateY(-3px);
 }
@@ -909,13 +913,147 @@ footer p {
 }
 
 
+/* ==================== DARK MODE ==================== */
+
+body.dark-mode {
+    background-color: #17191C;
+
+    color: #EEEEEA;
+}
+
+body.dark-mode .navbar {
+    background-color: #202327;
+}
+
+body.dark-mode .profile-name h2 {
+    color: #9BB3C6;
+}
+
+body.dark-mode .profile-name p {
+    color: #BBBBBB;
+}
+
+body.dark-mode .nav-links a {
+    color: #EEEEEE;
+}
+
+body.dark-mode .nav-links a:hover {
+    color: #9BB3C6;
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #9BB3C6;
+
+    color: #17191C;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background-color: #7895AD;
+}
+
+body.dark-mode .about-section,
+body.dark-mode #experience,
+body.dark-mode .certifications-section {
+    background-color: #17191C;
+}
+
+body.dark-mode .projects-section,
+body.dark-mode .education-section,
+body.dark-mode .contact-section {
+    background-color: #202327;
+}
+
+body.dark-mode .about-text h1 {
+    color: #EEEEEA;
+}
+
+body.dark-mode .about-text h1 span,
+body.dark-mode .section-title,
+body.dark-mode .project-card h3,
+body.dark-mode .experience-card h3,
+body.dark-mode .experience-date,
+body.dark-mode .education-info h3,
+body.dark-mode .education-date,
+body.dark-mode .certificate-info h3,
+body.dark-mode .recommendation-form h3,
+body.dark-mode .popup-content h3 {
+    color: #9BB3C6;
+}
+
+body.dark-mode .about-text p,
+body.dark-mode .project-card p,
+body.dark-mode .experience-card p,
+body.dark-mode .contact-container p,
+body.dark-mode .recommendation-card p,
+body.dark-mode .certificate-description {
+    color: #C7C7C7;
+}
+
+body.dark-mode .skill-card,
+body.dark-mode .experience-card,
+body.dark-mode .recommendation-card,
+body.dark-mode .recommendation-form,
+body.dark-mode .certificate-card {
+    background-color: #25292D;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .education-card {
+    background-color: #292D31;
+}
+
+body.dark-mode .skill-card h3,
+body.dark-mode .experience-card h4,
+body.dark-mode .certificate-organization,
+body.dark-mode .education-institution {
+    color: #EEEEEA !important;
+}
+
+body.dark-mode .skill-card p,
+body.dark-mode .education-board,
+body.dark-mode .certificate-description {
+    color: #C7C7C7 !important;
+}
+
+body.dark-mode .education-logo,
+body.dark-mode .certificate-image {
+    background-color: #30343A;
+}
+
+body.dark-mode .recommendation-card {
+    border-color: #3A3E43;
+}
+
+body.dark-mode .recommendation-form input,
+body.dark-mode .recommendation-form textarea {
+    background-color: #30343A;
+
+    color: #F1F1F1;
+
+    border-color: #4A4F55;
+}
+
+body.dark-mode .recommendation-form input::placeholder,
+body.dark-mode .recommendation-form textarea::placeholder {
+    color: #AAAAAA;
+}
+
+body.dark-mode .popup-content {
+    background-color: #25292D;
+
+    color: #EEEEEA;
+}
+
+
 /* ==================== RESPONSIVE DESIGN ==================== */
 
 @media screen and (max-width: 1000px) {
 
     .navbar {
         flex-direction: column;
+
         gap: 15px;
+
         text-align: center;
     }
 
@@ -925,8 +1063,11 @@ footer p {
 
     .about-section {
         flex-direction: column;
+
         text-align: center;
+
         gap: 30px;
+
         padding: 60px 8%;
     }
 
@@ -934,9 +1075,21 @@ footer p {
         font-size: 38px;
     }
 
-    .profile-image img {
+    .profile-image img,
+    .monogram {
         width: 230px;
+
         height: 230px;
+    }
+
+    .monogram::before {
+        width: 185px;
+
+        height: 185px;
+    }
+
+    .monogram span {
+        font-size: 60px;
     }
 
     .certificate-card {
@@ -945,6 +1098,7 @@ footer p {
 
     .certificate-image {
         width: 320px;
+
         min-width: 320px;
     }
 }
@@ -990,11 +1144,8 @@ footer p {
 
     .skill-card {
         width: 100%;
-        max-width: 320px;
-    }
 
-    .skill-card p {
-        font-size: 17px;
+        max-width: 320px;
     }
 
     .project-card {
@@ -1007,11 +1158,8 @@ footer p {
 
     .recommendation-card {
         width: 100%;
-        max-width: 400px;
-    }
 
-    .recommendation-card p {
-        font-size: 18px;
+        max-width: 400px;
     }
 
     .recommendation-form {
@@ -1020,13 +1168,17 @@ footer p {
 
     .education-card {
         flex-direction: column;
+
         text-align: center;
+
         padding: 25px 20px;
     }
 
     .education-logo {
         width: 110px;
+
         min-width: 110px;
+
         height: 110px;
     }
 
@@ -1040,13 +1192,17 @@ footer p {
 
     .certificate-card {
         flex-direction: column;
+
         text-align: center;
+
         padding: 20px;
     }
 
     .certificate-image {
         width: 100%;
+
         min-width: 0;
+
         max-width: 500px;
     }
 
@@ -1070,14 +1226,29 @@ footer p {
         text-align: center;
     }
 
-    .experience-card p {
-        font-size: 18px;
-    }
-
     .home-icon {
         width: 45px;
+
         height: 45px;
+
         right: 20px;
+
         bottom: 20px;
+    }
+
+    .monogram {
+        width: 230px;
+
+        height: 230px;
+    }
+
+    .monogram::before {
+        width: 185px;
+
+        height: 185px;
+    }
+
+    .monogram span {
+        font-size: 60px;
     }
 }
